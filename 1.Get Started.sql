@@ -51,3 +51,21 @@ DESCRIBE databaseName.tableName;
 
 -- or, if already using a database:
 DESCRIBE tableName;
+
+
+
+
+
+--Note
+--Generally, you should try to avoid using column or table names containing spaces or using reserved words in SQL.
+--For example, it-- 's best to avoid names like table or first name.
+-- If you must use such names, put them between back-tick `` delimiters. For example:
+
+CREATE TABLE `table`
+(
+ `first name` VARCHAR(30)
+);
+
+-- A query containing the back-tick delimiters on this table might be:
+
+SELECT `first name` FROM `table` WHERE `first name` LIKE 'a%';
